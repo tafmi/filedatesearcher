@@ -10,6 +10,10 @@ date.
 ##usage
 in windows cmd:
 
-1. cd path\to\filedatesearcher 
+cd path\to\filedatesearcher 
+#### compile
 
-2. path\to\filedatesearcher>java -cp bin filedatesearcher.FileDateSearcher
+path\to\filedatesearcher>javac -d bin -sourcepath src src/filedatesearcher/FileDateSearcher.java
+#### run
+
+path\to\filedatesearcher>java -cp bin filedatesearcher.FileDateSearcher
