@@ -40,14 +40,19 @@ public class FileSearcher {
     
     private void processDirectory(File directory) throws IOException{
         
-        File[] files=directory.listFiles();
-        for(File f:files){
-            if(f.isDirectory()){
-               processDirectory(f);
-            }
-            else{
-                processFile(f);//process the file
-            }
+        if(directory.list()!=null){
+           File[] files=directory.listFiles();
+           for(File f:files){
+               if(f.isDirectory()){
+                  processDirectory(f);
+               }
+               else{
+                   processFile(f);//process the file
+               }
+           }   
+        }
+        else{
+            return;
         }  
     }
     
